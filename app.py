@@ -5,6 +5,7 @@ from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 from nltk.tokenize import word_tokenize
 import re
+import nltk
 import unicodedata
 import contractions
 from sklearn.feature_extraction.text import CountVectorizer
@@ -13,8 +14,13 @@ from sklearn.linear_model import LogisticRegression
 
 app = Flask(__name__)
 
+
+nltk.download('stopwords')
+nltk.download('wordnet')
+nltk.download('punkt')
+
 # Load data from csv
-df = pd.read_csv('/Users/Abhi/Desktop/Innomatics/Intership /Sentiment_Analysis/Data/reviews_badminton/data.csv')
+df = pd.read_csv('Sentiment_Analysis/Data/reviews_badminton/data.csv')
 
 # Removing duplicate & null values
 df.drop_duplicates(inplace=True) 
@@ -114,4 +120,4 @@ def sentiment():
     return render_template('index.html', sentiment=sentiment)
 
 if __name__ == '__main__':
-    app.run(host=0.0.0.0,debug=True,port=5000)
+    app.run(host="0.0.0.0",debug=True,port="5000")
