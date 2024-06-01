@@ -1,4 +1,4 @@
-# Sentiment Analysis Flash App
+# Sentiment Analysis Flask App
 
 This repository contains a Flask app for sentiment analysis. The app analyzes sentiment of text reviews related to badminton.
 
@@ -45,10 +45,6 @@ This repository contains a Flask app for sentiment analysis. The app analyzes se
 ## About
 
 This Flask app uses a machine learning model to perform sentiment analysis on text reviews. It is built for analyzing sentiment specifically in badminton-related reviews. The model is trained on a dataset of badminton-related reviews and predicts whether a review is positive, negative, or neutral.
-
-## Contributors
-
-- [Avinash](https://github.com/ashroyalc)
 
 ## License
 
